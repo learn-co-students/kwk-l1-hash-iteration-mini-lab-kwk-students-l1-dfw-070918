@@ -16,11 +16,13 @@ def iterate_through_hash
 end
 
 def iterate_through_keys
-  create_olympics_hash = {:Sydney => "2000", :Athens => "2004", :Beijing => "2008", :London => "2012"}
-  add_a_key_value_pair.keys = upcased_cities
-end
+  upcased_cities = add_a_key_value_pair.map {|key, value| key.upcase}
+  upcased_cities.each {|city| puts city}
+end 
+  
 
 puts create_olympics_hash
 puts add_a_key_value_pair
 puts iterate_through_hash
 puts iterate_through_keys
+
